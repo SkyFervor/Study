@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<bean id="userDao" class="dao.impl.UserDaoImpl" scope="prototype"><!-- 原型拷贝 -->
+		<!-- 构造方法注入 -->
+		<constructor-arg name="daoId" value="1" />
+	</bean>
+
+	<bean name="userService" class="service.UserService" scope="singleton"><!-- 单例（默认） -->
+		<!-- setter注入 -->
+		<property name="userDao" ref="userDao" />
+		<!-- 简单属性注入 -->
+		<property name="daoStatus" value="good" />
+		<!-- 集合注入 -->
+		<property name="list">
+			<list>
+				<value>a</value>
+				<value>b</value>
+				<value>c</value>
+			</list>
+		</property>
+		<property name="map">
+			<map>
+				<entry key="a" value="A" />
+				<entry key="b" value="B" />
+				<entry key="c" value="C" />
+			</map>
+		</property>
+		<property name="set">
+			<set>
+				<value>A</value>
+				<value>B</value>
+				<value>C</value>
+			</set>
+		</property>
+	</bean>
+
+	<!-- 自动装配（根据属性名） -->
+	<!-- 延迟加载 -->
+	<!--
+		<bean name="userService2" class="service.UserService" autowire="byName" lazy-init="true" />
+	-->
+
+	<!-- 生命周期 -->
+	<!--
+		<bean name="userService3" class="service.UserService" init-method="init" destroy-method="destroy"
+		scope="singleton" />
+	-->
+
+	<!-- 错误实例，prototype模式不受监控，不应配合init-method和destroy-init一起使用 -->
+	<!--
+		<bean name="userService4" class="service.UserService" init-method="init" destroy-method="destroy"
+		scope="prototype" />
+	-->
+
+	<bean name="userAspect" class="aspect.UserAspect" />
+	<aop:config>
+		<aop:aspect ref="userAspect">
+			<aop:pointcut id="serviceMethods" expression="execution(* service.*Service*.*(..))" />
+			<aop:before pointcut-ref="serviceMethods" method="before" />
+			<aop:after pointcut-ref="serviceMethods" method="after" />
+		</aop:aspect>
+	</aop:config>
+</beans>

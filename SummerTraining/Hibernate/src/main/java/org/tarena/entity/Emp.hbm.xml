@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.tarena.entity">
+	<class name="Emp" table="t_emp">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="account" unique="true" />
+		<property name="password" />
+		<property name="ename" />
+		<property name="salary" />
+		<property name="age" />
+		<many-to-one name="dept" class="Dept" column="dept_id" />
+	</class>
+</hibernate-mapping>

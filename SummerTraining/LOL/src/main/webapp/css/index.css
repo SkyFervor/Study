@@ -1,0 +1,51 @@
+﻿* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	padding-top: 42px;
+}
+
+ul {
+	list-style: none;
+}
+
+.wraper {
+	background: url("../image/main-bg-v13.jpg") no-repeat scroll center top;
+	background-repeat: none;
+	background-position: 50% 0px;
+}
+
+.layout {
+	width: 980px;
+	margin: 0px auto;
+}
+
+.toper {
+	background: url("../image/main-top-v13.jpg") no-repeat scroll center top;
+	height: 474px;
+	position: relative;
+}
+
+.topmenu-lnk {
+	display: block;
+	height: 46px;
+	width: 96px;
+	padding-top: 26px;
+}
+
+.topmenuspr {
+	display: block;
+	margin: 0px auto;
+	width: 65px;
+	height: 34px;
+}
+
+.m-home{
+	
+}
+
+.m-home:hover{
+	
+}

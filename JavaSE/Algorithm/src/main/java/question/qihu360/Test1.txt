@@ -1,0 +1,10 @@
+IN:
+3
+whli##ilr#e(s#*s)
+outcha@putchar(*s=#++)
+returnWA##A!!##C
+
+OUT:
+while(*s)
+putchar(*s++)
+returnAC

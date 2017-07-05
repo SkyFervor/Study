@@ -1,0 +1,666 @@
+﻿html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, html,
+	body html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+	form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0 none;
+	margin: 0;
+	outline: 0 none;
+	padding: 0;
+}
+
+html, body {
+	color: #4b4b4b;
+	font: 12px/150% arial, 宋体;
+}
+
+}
+select, textarea {
+	font: 12px/1.5 arial, helvetica, clean, sans-serif;
+}
+
+body {
+	background: #fff none repeat scroll 0 0;
+}
+
+#header {
+	background-color: #636363;
+	background-repeat: repeat-x;
+	height: 30px;
+	width: 100%;
+	z-index: 1000;
+}
+
+.clearfix::after {
+	clear: both;
+	content: " ";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+.head {
+	color: #fff;
+	font-family: "tahoma", "arial", "宋体";
+	margin: 0 auto;
+	width: 980px;
+}
+
+.city, .logo-box {
+	padding-left: 0;
+}
+
+.city {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	margin-right: 15px;
+	padding-left: 15px;
+}
+
+.head-m {
+	float: left;
+}
+
+.city a.fc-city {
+	font-size: 12px;
+	font-weight: bold;
+	padding-right: 5px;
+}
+
+.head a, .head a:hover, .city a, .city a:visited, a.top-nav-btn, a.top-nav-btn:visited, a.reg:visited
+	{
+	color: #fff;
+}
+
+.head a, .head a:hover, .city a, .city a:visited, a.top-nav-btn, a.top-nav-btn:visited, a.reg:visited
+	{
+	color: #fff;
+}
+
+a {
+	color: #06c;
+	text-decoration: none;
+}
+
+a {
+	color: #24d;
+	text-decoration: none;
+}
+
+.clearfix::after {
+	clear: both;
+	content: " ";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+.column-list {
+	float: left;
+}
+
+ol, ul, li {
+	list-style: outside none none;
+}
+
+.column-list li {
+	display: inline;
+	float: left;
+	height: 30px;
+	position: relative;
+}
+
+element.style {
+	padding-top: 42px;
+}
+
+body {
+	color: #666;
+	font: 12px/1.6em Microsoft YaHei, Tahoma, simsun;
+	margin: 0 auto;
+	min-width: 1000px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.head a, .head a:hover, .city a, .city a:visited, a.top-nav-btn, a.top-nav-btn:visited, a.reg:visited
+	{
+	color: #fff;
+}
+
+.column {
+	display: inline-block;
+	line-height: 30px;
+	padding: 0 14px;
+}
+
+.top-nav {
+	position: relative;
+	z-index: 999;
+}
+
+.fl {
+	float: left;
+}
+
+.top-nav-btn {
+	display: inline-block;
+	height: 18px;
+	line-height: 18px;
+	padding: 6px 14px;
+}
+
+.head-r {
+	padding-right: 0;
+}
+
+.head-r {
+	float: right;
+	padding-right: 15px;
+}
+
+.fl {
+	float: left;
+}
+
+.head-r.ganji-dingdong {
+	position: relative;
+	z-index: 6000;
+}
+
+.reg-login {
+	background-position: 0 -50px;
+	color: #fff;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 8px;
+	position: relative;
+	z-index: 45;
+}
+
+a {
+	color: #06c;
+	text-decoration: none;
+}
+
+a {
+	color: #24d;
+	text-decoration: none;
+}
+
+.reg {
+	margin-right: 10px;
+}
+
+.logo-wrap {
+	margin: 10px auto;
+	width: 980px;
+}
+
+.gj-logo {
+	float: left;
+	padding-right: 14px;
+}
+
+.logo-title {
+	border-left: 1px solid #cdcdcd;
+	color: #6ba001;
+	float: left;
+	font-family: "Microsoft Yahei", "Simsun";
+	font-size: 24px;
+	height: 40px;
+	line-height: 34px;
+	margin-top: 12px;
+	padding-left: 14px;
+}
+
+.user-login {
+	background-position: 0 0;
+}
+
+.logo-tit {
+	background-image: url("../images/logo_tit.png");
+	background-repeat: no-repeat;
+	float: left;
+	height: 23px;
+	line-height: 22px;
+	margin-top: 7px;
+	text-indent: -9999px;
+	width: 96px;
+}
+
+#wrapper {
+	position: relative;
+}
+
+#wrapper {
+	margin: 0 auto;
+	width: 980px;
+}
+
+#wrapper {
+	z-index: 1;
+}
+
+.clearfix::after {
+	clear: both;
+	content: " ";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+.login-banner {
+	height: 420px;
+	width: 560px;
+}
+
+.login-banner {
+	float: left;
+	height: 390px;
+	overflow: hidden;
+	position: relative;
+	width: 565px;
+}
+
+.login-box {
+	height: 408px;
+	width: 420px;
+}
+
+.login-box {
+	height: 408px;
+	overflow: hidden;
+	padding-top: 12px;
+	width: 420px;
+}
+
+.login-box {
+	background: #f9f9f9 none repeat scroll 0 0;
+	float: left;
+	height: 340px;
+	padding-top: 50px;
+	width: 415px;
+}
+
+.cont-box1 {
+	margin: 0 0 0 30px;
+	width: 390px;
+}
+
+.cont-box1 {
+	margin-left: 30px;
+	width: 390px;
+}
+
+.cont-box1 {
+	float: left;
+	width: 590px;
+}
+
+element.style {
+	display: block;
+}
+
+.error-box {
+	background: #fff6e4 none repeat scroll 0 0;
+	border: 1px solid #fccf74;
+	height: 36px;
+	line-height: 36px;
+	padding: 0;
+	width: 232px;
+}
+
+.error-box {
+	height: 30px;
+	padding: 0 0 5px 0px;
+}
+
+.validatorError, .V5 
+.validatorError {
+	background: rgba(0, 0, 0, 0) url("../images/login/validatorError.png") no-repeat scroll 10px
+		center;
+	color: #f60;
+}
+
+.validatorMsg, .V5 
+.validatorMsg {
+	display: inline-block;
+	font-size: 14px;
+	padding: 0 0 0 36px;
+	vertical-align: top;
+}
+
+.lh24 {
+	height: 24px;
+	line-height: 24px;
+}
+
+.login_username {
+	margin-bottom: 7px;
+}
+
+.login_username input {
+	padding: 3px 3px 3px 28px;
+	width: 234px;
+}
+
+.usename {
+	background-position: left 3px;
+	background-repeat: no-repeat;
+}
+
+.usename, .usepassword {
+	padding: 3px 3px 3px 28px;
+	width: 234px;
+}
+
+.usename {
+	background: #fff url("../images/login/bg-input.png") no-repeat scroll left top;
+}
+
+.usename, .usepassword {
+	padding: 3px 3px 3px 28px;
+	width: 234px;
+}
+
+.input-text {
+	/* background: #fff none repeat scroll 0 0;*/
+	border: 1px solid #c8c8c8;
+	box-shadow: 1px 1px 1px 0 #eaeaea inset;
+	float: left;
+	font-size: 14px;
+	height: 28px;
+	line-height: 28px;
+	/*padding: 3px 3px 3px 8px;*/
+	vertical-align: middle;
+	/* width: 254px;*/
+}
+
+input {
+	margin: 0;
+}
+
+body, button, input, select, textarea {
+	font: 12px/1.5 arial, helvetica, clean, sans-serif;
+}
+
+input::-moz-placeholder {
+	color: #999;
+}
+
+.lh24 {
+	height: 24px;
+	line-height: 24px;
+}
+
+.field-tips {
+	float: none;
+	margin-left: 148px;
+	padding: 0;
+}
+
+a {
+	color: #06c;
+	text-decoration: none;
+}
+
+a {
+	color: #24d;
+	text-decoration: none;
+}
+
+.field {
+	margin-bottom: 3px;
+}
+
+.field {
+	margin-bottom: 3px;
+}
+
+.field {
+	margin-bottom: 18px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.field .usepassword {
+	padding: 3px 3px 3px 28px;
+	width: 234px;
+}
+
+.usepassword {
+	background-position: left -27px;
+	background-repeat: no-repeat;
+}
+
+.usename, .usepassword {
+	padding: 3px 3px 3px 28px;
+	width: 234px;
+}
+
+.usepassword {
+	background: #fff url("../images/login/bg-input.png") no-repeat scroll left -40px;
+}
+
+.input-text {
+	background: #fff none repeat scroll 0 0;
+	border: 1px solid #c8c8c8;
+	box-shadow: 1px 1px 1px 0 #eaeaea inset;
+	float: left;
+	font-size: 14px;
+	height: 28px;
+	line-height: 28px;
+	padding: 3px 3px 3px 8px;
+	vertical-align: middle;
+	width: 254px;
+}
+
+input {
+	margin: 0;
+}
+
+body, button, input, select, textarea {
+	font: 12px/1.5 arial, helvetica, clean, sans-serif;
+}
+
+input::-moz-placeholder {
+	color: #999;
+}
+
+.submit-box, .N-txt1 {
+	margin: 15px 0;
+}
+
+.submit-box, .N-txt1 {
+	margin-bottom: 13px;
+}
+
+.chk-vm {
+	vertical-align: middle;
+}
+
+input {
+	margin: 0;
+}
+
+body, button, input, select, textarea {
+	font: 12px/1.5 arial, helvetica, clean, sans-serif;
+}
+
+input::-moz-placeholder {
+	color: #999;
+}
+
+.submit-box {
+	margin: 13px 0 20px;
+}
+
+.submit-box, .N-txt1 {
+	margin: 15px 0;
+}
+
+.submit-box, .N-txt1 {
+	margin-bottom: 13px;
+}
+
+input[type="submit"], input[type="reset"], input[type="button"], button {
+	cursor: pointer;
+}
+
+.btn-org {
+	width: 267px;
+}
+
+.btn-org {
+	width: 267px;
+}
+
+.btn-org {
+	background: #fd8000 none repeat scroll 0 0;
+	border: 0 none;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	width: 234px;
+}
+
+input {
+	margin: 0;
+}
+
+body, button, input, select, textarea {
+	font: 12px/1.5 arial, helvetica, clean, sans-serif;
+}
+
+input::-moz-placeholder {
+	color: #999;
+}
+
+element.style {
+	display: none;
+}
+
+.msg-submit {
+	color: #ec3701;
+	font-size: 14px;
+}
+
+.N-box1 {
+	border-top: 1px solid #ddd;
+	margin-top: 20px;
+	width: 360px;
+}
+
+.N-box1 {
+	border-top: 1px solid #ddd;
+	padding: 0;
+}
+
+.N-box1 {
+	padding: 5px 30px 0;
+}
+
+.N-box1 .other-login {
+	clear: both;
+	overflow: hidden;
+}
+
+.N-txt2 {
+	line-height: 22px;
+}
+
+.gzweibo {
+	padding: 5px 0 15px;
+}
+
+ol, ul, li {
+	list-style: outside none none;
+}
+
+.gzweibo li {
+	display: inline;
+	float: left;
+}
+
+.gzweibo a {
+	color: #707070;
+	text-decoration: none;
+}
+
+.other-login-ico {
+	
+}
+
+.ico-sinaweibo {
+	background: rgba(0, 0, 0, 0) url("../images/login/weibo.png") no-repeat scroll 0 0;
+}
+
+.other-login-ico {
+	float: left;
+	height: 16px;
+	margin-right: 3px;
+	vertical-align: middle;
+	width: 16px;
+}
+
+.split-line2 {
+	color: #ccc;
+	padding: 0 10px;
+}
+
+.gzweibo li {
+	display: inline;
+	float: left;
+}
+
+.gzweibo a {
+	color: #707070;
+	text-decoration: none;
+}
+
+.other-login-ico {
+	
+}
+
+.ico-tencent {
+	background: rgba(0, 0, 0, 0) url("../images/login/tencent.png") no-repeat scroll 0 0;
+}
+
+.other-login-ico {
+	float: left;
+	height: 16px;
+	margin-right: 3px;
+	vertical-align: middle;
+	width: 16px;
+}
+
+#footer {
+	color: #4b4b4b;
+	margin: 0 auto;
+	padding: 15px 0 35px;
+	text-align: center;
+	width: 980px;
+}
+
+#footer a {
+	color: #4b4b4b;
+	white-space: nowrap;
+}
+
+a {
+	color: #06c;
+	text-decoration: none;
+}
+
+a {
+	color: #24d;
+	text-decoration: none;
+}

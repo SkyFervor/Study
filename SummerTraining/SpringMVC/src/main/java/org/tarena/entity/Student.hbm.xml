@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.tarena.entity">
+	<class name="Student" table="t_student">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="sname" column="sname" />
+		<set name="teachers" table="student_teacher" cascade="save-update">
+			<key column="student_id" />
+			<many-to-many class="Teacher" column="teacher_id" />
+		</set>
+	</class>
+</hibernate-mapping>

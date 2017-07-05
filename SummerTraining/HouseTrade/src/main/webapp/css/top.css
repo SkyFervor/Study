@@ -1,0 +1,176 @@
+#header {
+	background-color: #636363;
+	background-repeat: repeat-x;
+	height: 30px;
+	width: 100%;
+	z-index: 1000;
+}
+
+#footer {
+	color: #4b4b4b;
+	margin: 0 auto;
+	padding: 15px 0 35px;
+	text-align: center;
+	width: 980px;
+}
+
+#footer a {
+	color: #4b4b4b;
+	white-space: nowrap;
+}
+
+.head a, .head a:hover, .city a, .city a:visited, a.top-nav-btn, a.top-nav-btn:visited, a.reg:visited
+	{
+	color: #fff;
+}
+
+.head {
+	color: #fff;
+	font-family: "tahoma", "arial", "宋体";
+	margin: 0 auto;
+	width: 980px;
+}
+
+.city, .logo-box {
+	padding-left: 0;
+}
+
+.city, .logo-box {
+	padding-left: 0;
+}
+
+.city {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	margin-right: 15px;
+	padding-left: 15px;
+}
+
+.head-r {
+	padding-right: 0;
+}
+
+.head-r {
+	float: right;
+	padding-right: 15px;
+}
+
+.head-r.ganji-dingdong {
+	position: relative;
+	z-index: 6000;
+}
+
+.fl {
+	float: left;
+}
+
+.reg {
+	margin-right: 10px;
+}
+
+.reg-login {
+	background-position: 0 -50px;
+	color: #fff;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 8px;
+	position: relative;
+	z-index: 45;
+}
+
+.city a.fc-city {
+	font-size: 12px;
+	font-weight: bold;
+	padding-right: 5px;
+}
+
+.logo-wrap {
+	margin: 10px auto;
+	width: 980px;
+}
+
+.gj-logo {
+	float: left;
+	padding-right: 14px;
+}
+
+.logo-title {
+	border-left: 1px solid #cdcdcd;
+	color: #6ba001;
+	float: left;
+	font-family: "Microsoft Yahei", "Simsun";
+	font-size: 24px;
+	height: 40px;
+	line-height: 34px;
+	margin-top: 12px;
+	padding-left: 14px;
+}
+
+.logo-tit {
+	background-image: url("../images/logo_tit.png");
+	background-repeat: no-repeat;
+	float: left;
+	height: 23px;
+	line-height: 22px;
+	margin-top: 7px;
+	text-indent: -9999px;
+	width: 96px;
+}
+
+.user-login {
+	background-position: 0 0;
+}
+
+.user-reg {
+	background-position: 0 -25px;
+}
+
+.house-list {
+	background-image: url("../images/house/list_logo.png");
+	background-repeat: no-repeat;
+	float: left;
+	height: 23px;
+	line-height: 22px;
+	margin-top: 7px;
+	text-indent: -9999px;
+	width: 96px;
+}
+
+.house-detail {
+	background-image: url("../images/house/detail_logo.png");
+	background-repeat: no-repeat;
+	float: left;
+	height: 23px;
+	line-height: 22px;
+	margin-top: 7px;
+	text-indent: -9999px;
+	width: 96px;
+}
+
+.house-publish {
+	background-image: url("../images/publish/publish-logo.png");
+	background-repeat: no-repeat;
+	float: left;
+	height: 23px;
+	line-height: 22px;
+	margin-top: 7px;
+	text-indent: -9999px;
+	width: 96px;
+}
+
+.clearfix::after {
+	clear: both;
+	content: " ";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+.clearfix::after {
+	clear: both;
+	content: " ";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}

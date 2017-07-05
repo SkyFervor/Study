@@ -1,0 +1,18 @@
+<beans>
+	<bean name="u" class="dao.impl.UserDaoImpl" />
+	<bean name="userService" class="service.UserService">
+		<property name="userDao" bean="u" />
+	</bean>
+
+	<bean name="u2" class="dao.impl.UserDaoImpl2" />
+	<bean name="userService2" class="service.UserService">
+		<property name="userDao" bean="u2" />
+	</bean>
+
+	<bean name="u3" class="dao.impl.UserDaoImpl3">
+		<property name="userDao" bean="u" />
+	</bean>
+	<bean name="userService3" class="service.UserService">
+		<property name="userDao" bean="u3" />
+	</bean>
+</beans>

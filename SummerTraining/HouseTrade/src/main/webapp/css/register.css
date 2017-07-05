@@ -1,0 +1,203 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr,
+	acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small,
+	strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form,
+	label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0px;
+	padding: 0px;
+	border: 0px none;
+	text-decoration: none;
+	outline: 0px none;
+}
+
+body {
+	font: 12px/1.5 arial, \5b8b\4f53;
+	line-height: 150%;
+	color: #4b4b4b
+}
+
+a {
+	color: #4b4b4b;
+	text-decoration: none;
+}
+
+ul, li {
+	list-style: none;
+}
+
+.logo-wrap {
+	margin: 10px auto;
+	width: 980px;
+}
+
+.gj-logo {
+	float: left;
+	padding-right: 14px;
+	height: 62px;
+	width: 145px;
+}
+
+.logo-title {
+	border-left: 1px solid #CDCDCD;
+	color: #6BA001;
+	float: left;
+	font-size: 24px;
+	font-family: "Microsoft Yahei", "Simsun";
+	height: 40px;
+	line-height: 34px;
+	margin-top: 12px;
+	padding-left: 14px;
+}
+
+.user-reg {
+	background-position: 0px -25px;
+}
+
+.clearfix::after {
+	content: " ";
+	display: block;
+	clear: both;
+	height: 0px;
+	visibility: hidden;
+}
+
+#wrapper {
+	position: relative;
+	margin: 0px auto;
+	width: 980px;
+}
+
+.reg-cont {
+	width: 980px;
+	height: 350px;
+	padding: 10px 0px 20px 14px;
+	border: 1px solid #DDD;
+	position: relative;
+}
+
+.cont-box1 {
+	float: left;
+	width: 590px;
+	text-align: left;
+}
+
+.desc {
+	font-size: 18px;
+	line-height: 30px;
+	font-family: "Microsoft YaHei";
+	color: #A9A9A9;
+	margin-left: 30px;
+	margin-bottom: 50px;
+}
+
+.N-txt3 span {
+	display: inline-block;
+	padding-right: 10px;
+}
+
+.other-login-txt {
+	color: #4B4B4B;
+	line-height: 22px;
+	padding: 10px 0px 4px;
+}
+
+.other-login-list li {
+	float: left;
+	display: inline;
+	margin-bottom: 7px;
+	white-space: nowrap;
+}
+
+.fc-gray {
+	color: #707070;
+}
+
+.split-line2 {
+	color: #CCC;
+	padding: 0px 10px;
+}
+
+.field {
+	margin: 0px 0px 18px 0px;
+	text-align: left;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.field-tit, .reg-field .field-tit {
+	color: #4B4B4B;
+	float: left;
+	line-height: 32px;
+	text-align: left;
+	font-size: 14px;
+	padding-right: 4px;
+	width: 82px;
+	height: 50px;
+}
+
+.input-text {
+	background: #FFF none repeat scroll 0% 0%;
+	border: 1px solid #C8C8C8;
+	float: left;
+	font-size: 14px;
+	height: 28px;
+	padding: 3px 3px 3px 8px;
+	vertical-align: middle;
+	width: 190px;
+}
+
+.msg-box {
+	width: auto;
+	height: 36px;
+	line-height: 36px;
+	vertical-align: middle;
+}
+
+.gj-agreement {
+	margin: -7px 0px 6px 86px;
+}
+
+.gj-agreement-cont {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	width: auto;
+}
+
+.chk-vm {
+	float: left;
+	margin: 8px 5px 0px 0px;
+	vertical-align: middle;
+}
+
+.gj-agreement-cont label {
+	float: left;
+	width: 185px;
+}
+
+.submit-box, .N-txt1 {
+	padding-left: 86px;
+	margin-bottom: 13px
+}
+
+.btn-org {
+	background: #FD8000 none repeat scroll 0% 0%;
+	border: 0px none;
+	color: #FFF;
+	font-size: 16px;
+	font-weight: bold;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	width: 190px;
+}
+
+.btn-org:hover {
+	background: #FD6000 none repeat scroll 0% 0%;
+}
+
+#footer {
+	margin: 0px auto;
+	padding: 15px 0px 35px;
+	text-align: center;
+	width: 980px;
+}

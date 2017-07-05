@@ -1,0 +1,43 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/hibernate</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password"></property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<!-- JDBC connection pool (use the built-in) -->
+		<!-- <property name="connection.pool_size">1</property> -->
+
+		<!-- c3p0 connection pool -->
+		<property name="c3p0.max_size">20</property>
+		<property name="c3p0.min_size">1</property>
+		<property name="c3p0.timeout">5000</property>
+		<property name="c3p0.max_statements">100</property>
+		<property name="c3p0.idle_test_period">3000</property>
+		<property name="c3p0.acquire_increment">2</property>
+		<property name="c3p0.validate">true</property>
+
+		<!-- Enable Hibernate's automatic session context management -->
+		<property name="current_session_context_class">thread</property>
+
+		<!-- Disable the second-level cache -->
+		<property name="cache.use_second_level_cache">false</property>
+
+		<!-- Echo all executed SQL to standard output -->
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+
+		<!-- Drop and re-create the database schema on startup -->
+		<property name="hbm2ddl.auto">update</property>
+
+		<mapping class="pojo.Category" />
+		<mapping class="pojo.Topic" />
+		<mapping class="pojo.Message" />
+
+	</session-factory>
+</hibernate-configuration>

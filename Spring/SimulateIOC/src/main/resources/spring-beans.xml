@@ -1,0 +1,6 @@
+<beans>
+	<bean id="u" class="dao.impl.UserDaoImpl" />
+	<bean id="userService" class="service.UserService">
+		<property name="userDao" bean="u" />
+	</bean>
+</beans>

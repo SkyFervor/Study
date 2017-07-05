@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="GBK" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+	version="2.1">
+	<tlib-version>1.0</tlib-version>
+	<short-name>mytaglib</short-name>
+	<uri>http://www.crazyit.org/mytaglib</uri>
+	<tag>
+		<name>iterator</name>
+		<tag-class>tag.IteratorTag</tag-class>
+		<body-content>scriptless</body-content>
+		<attribute>
+			<name>collection</name>
+			<required>true</required>
+			<fragment>true</fragment>
+		</attribute>
+		<attribute>
+			<name>item</name>
+			<required>true</required>
+			<fragment>true</fragment>
+		</attribute>
+	</tag>
+</taglib>

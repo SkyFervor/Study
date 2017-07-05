@@ -1,0 +1,189 @@
+.wraper {
+	width: 970px;
+	margin: 0px auto;
+}
+
+.layout {
+	width: 970px;
+	margin: 0px auto;
+}
+
+.selitem {
+	margin-bottom: 5px;
+	overflow: hidden;
+}
+
+.selitem dt {
+	float: left;
+	margin: 0px 0px 0px 15px;
+	padding-right: 5px;
+}
+
+.selitem dd {
+	float: left;
+	width: 870px;
+}
+
+.lh24 {
+	line-height: 24px;
+}
+
+.dd-sale-price {
+	
+}
+
+.ui-search-filter {
+	background-color: #F7F7F7;
+	height: 40px;
+}
+
+.cur {
+	background-color: #62AF00;
+	color: #FFF;
+}
+
+.cond {
+	border: 1px solid #CCC;
+}
+
+.selitem dd a {
+	display: inline-block;
+	margin-right: 6px;
+	padding: 0px 3px;
+}
+
+body {
+	font-size: 12px;
+	font-family: arial, 宋体;
+	color: #4B4B4B;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+a {
+	color: #06C;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.list li {
+	border-bottom: 1px solid rgb(231, 231, 231);
+	padding: 10px 10px 10px 15px;
+}
+
+.list li:hover {
+	background-color: rgb(226, 255, 184);
+}
+
+.list-mod1 {
+	width: 185px;
+	height: 120px;
+	float: left;
+}
+
+.list-mod2 {
+	width: 530px;
+	float: left;
+}
+
+.list-mod3 {
+	width: 210px;
+	float: right;
+}
+
+.info-title {
+	height: 28px;
+	line-height: 28px;
+	margin: 0px 0px 15px;
+	font-size: 14px;
+}
+
+.list-word {
+	height: 18px;
+	line-height: 18px;
+	margin-bottom: 6px;
+}
+
+.list-word-col {
+	float: left;
+}
+
+.ico-general {
+	width: 18px;
+	height: 14px;
+	float: left;
+	background-image: url("../images/bg_ico_house.png");
+	background-position: -36px -280px;
+	margin-right: 3px;
+}
+
+.adds {
+	color: #707070;
+}
+
+.ico-coordinate {
+	width: 12px;
+	height: 14px;
+	float: left;
+	margin: 0px 3px 0px 15px;
+	background-image: url("../images/bg_ico_house.png");
+	background-position: -142px -141px;
+}
+
+.cut-line {
+	color: #DDD;
+	padding: 0px 5px;
+}
+
+.list-part-first {
+	margin-top: 10px;
+}
+
+.list-part {
+	margin-bottom: 2px;
+	color: #999;
+	height: 22px;
+	line-height: 22px;
+}
+
+em, i {
+	font-style: normal;
+}
+
+.sale-price {
+	color: #F60;
+	font-size: 20px;
+	font-family: "Microsoft YaHei", "SimSun";
+}
+
+.edit-eara {
+	padding-top: 15px;
+	float: right;
+}
+
+.btn-post {
+	background-color: #fd8000;
+	width: auto;
+	padding: 0 30px 0 30px;
+	overflow: visible;
+	text-indent: 0;
+	background-position: -4px -118px;
+	color: #fff;
+	height: 30px;
+	line-height: 29px;
+	font-size: 14px;
+	font-weight: bold;
+	display: block;
+	float: left;
+	margin-left: 8px;
+}
