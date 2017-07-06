@@ -1,12 +1,12 @@
 package list;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Test {
 	public static void main(String[] args) {
 		testLinkedList();
+
+		System.out.println();
 		testArrayList();
 	}
 
@@ -22,7 +22,7 @@ public class Test {
 		list.add(null);
 		list.add(null);
 		System.out.println(list);
-		for (Integer i : list) {
+		for (Integer i : list) { // Exception
 			System.out.println(i.intValue());
 		}
 	}
