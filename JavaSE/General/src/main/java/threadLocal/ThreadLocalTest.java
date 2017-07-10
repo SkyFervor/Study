@@ -1,5 +1,7 @@
 package threadLocal;
 
+import javafx.util.Pair;
+
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -16,10 +18,9 @@ public class ThreadLocalTest {
 	public static void main(String[] args) throws InterruptedException, NoSuchFieldException, IllegalAccessException {
 		ThreadLocal<String> threadLocal = new ThreadLocal<>();
 		threadLocal.set("test");
-		System.out.println(getHashCode(Collections.singletonList(threadLocal)));
-		System.out.println(getThreadLocalsHashCode());
+		System.out.println(getHashCode());
 		threadLocal = null;
-		System.out.println(getThreadLocalsHashCode());
+		System.out.println(getHashCode());
 
 		List<List<Integer>> list = new ArrayList<>();
 		for (int i = 0; i < 1000; i++) {
@@ -39,10 +40,10 @@ public class ThreadLocalTest {
 			e.printStackTrace();
 		}
 
-		System.out.println(ThreadLocalTest.getThreadLocalsHashCode());
+		System.out.println(getHashCode());
 	}
 
-	public static List<Integer> getThreadLocalsHashCode() {
+	public static List<WeakReference<ThreadLocal>> getThreadLocalMapEntry() {
 		try {
 			Field threadLocalsField = Thread.class.getDeclaredField("threadLocals");
 			threadLocalsField.setAccessible(true);
@@ -52,32 +53,57 @@ public class ThreadLocalTest {
 			tableField.setAccessible(true);
 			WeakReference<ThreadLocal>[] table = (WeakReference<ThreadLocal>[]) tableField.get(threadLocals);
 
-			List<ThreadLocal> list = new ArrayList<>();
+			List<WeakReference<ThreadLocal>> list = new ArrayList<>();
 			for (WeakReference<ThreadLocal> weakReference : table) {
 				if (weakReference == null) {
 					continue;
 				}
 
-				list.add(weakReference.get());
+				list.add(weakReference);
 			}
-			return getHashCode(list);
+			return list;
 		} catch (IllegalAccessException | NoSuchFieldException e) {
 			e.printStackTrace();
 			return Collections.emptyList();
 		}
 	}
 
-	public static List<Integer> getHashCode(List<ThreadLocal> threadLocals) {
-		List<Integer> list = new LinkedList<>();
+	public static List<Pair<Integer, Object>> getHashCode() {
+		List<WeakReference<ThreadLocal>> list = getThreadLocalMapEntry();
+		System.out.println();
+		return getHashCode(list);
+	}
+
+	public static List<Pair<Integer, Object>> getHashCode(List<WeakReference<ThreadLocal>> weakReferences) {
+		if (weakReferences == null || weakReferences.isEmpty()) {
+			return Collections.emptyList();
+		}
+
+		List<Pair<Integer, Object>> list = new LinkedList<>();
 		try {
-			Field field = ThreadLocal.class.getDeclaredField("threadLocalHashCode");
-			field.setAccessible(true);
-			for (ThreadLocal threadLocal : threadLocals) {
-				if (threadLocal == null) {
+			Field hashCodeField = ThreadLocal.class.getDeclaredField("threadLocalHashCode");
+			hashCodeField.setAccessible(true);
+			Field valueField = weakReferences.get(0).getClass().getDeclaredField("value");
+			valueField.setAccessible(true);
+
+			for (WeakReference<ThreadLocal> weakReference : weakReferences) {
+				if (weakReference == null) {
 					continue;
 				}
-				int hashCode = (int) field.get(threadLocal);
-				list.add(hashCode);
+				Object value = valueField.get(weakReference);
+				int hashCode;
+
+				ThreadLocal threadLocal = weakReference.get();
+				if (threadLocal == null) {
+					if (value == null) {
+						continue;
+					}
+					hashCode = -1;
+				} else {
+					hashCode = (int) hashCodeField.get(threadLocal);
+				}
+
+				list.add(new Pair<>(hashCode, value));
 			}
 			return list;
 		} catch (NoSuchFieldException | IllegalAccessException e) {
