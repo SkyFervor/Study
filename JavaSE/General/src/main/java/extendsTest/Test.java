@@ -58,6 +58,7 @@ public class Test {
 class Super {
 
 	int a = 1;
+	static int b = 2;
 
 	public int getA() {
 		return a;
