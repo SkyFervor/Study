@@ -8,6 +8,11 @@ import java.util.concurrent.*;
  */
 public class CallableFutureWithThreadPoolTest {
 	public static void main(String[] args) throws ExecutionException, InterruptedException {
+		test1();
+		test2();
+	}
+
+	public static void test1() throws InterruptedException, ExecutionException {
 		ExecutorService executorService = Executors.newCachedThreadPool();
 		CompletionService<String> completionService = new ExecutorCompletionService<>(executorService);
 		Callable<String> callable1 = () -> {
@@ -26,10 +31,17 @@ public class CallableFutureWithThreadPoolTest {
 			System.out.println(completionService.take().get());
 		}
 		System.out.println("final");
+	}
 
+	public static void test2() throws ExecutionException, InterruptedException {
+		ExecutorService executorService = Executors.newCachedThreadPool();
+		Callable<String> callable = () -> {
+			Thread.sleep(1000);
+			return "end1";
+		};
 		/* Direct submit */
 		System.out.println();
-		Future<String> future = executorService.submit(callable1);
+		Future<String> future = executorService.submit(callable);
 		System.out.println(future.get());
 	}
 }
