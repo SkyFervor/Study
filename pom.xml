@@ -54,6 +54,8 @@
 		<com.mchange.c3p0.version>0.9.5.2</com.mchange.c3p0.version>
 		<mysql.version>6.0.6</mysql.version>
 
+		<org.apache.commons>3.6</org.apache.commons>
+
 		<org.apache.poi.version>3.16</org.apache.poi.version>
 		<org.jdom.version>2.0.6</org.jdom.version>
 	</properties>
@@ -168,6 +170,13 @@
 				<artifactId>mysql-connector-java</artifactId>
 				<version>${mysql.version}</version>
 				<scope>runtime</scope>
+			</dependency>
+
+			<!-- Utils -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${org.apache.commons}</version>
 			</dependency>
 
 			<dependency>
