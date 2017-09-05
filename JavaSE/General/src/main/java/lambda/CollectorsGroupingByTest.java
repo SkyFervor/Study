@@ -1,8 +1,6 @@
 package lambda;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -14,7 +12,9 @@ public class CollectorsGroupingByTest {
 		int value;
 		int name;
 
-		Entity() {
+		Entity(int value, int name) {
+			this.value = value;
+			this.name = name;
 		}
 
 		public int getValue() {
@@ -35,50 +35,58 @@ public class CollectorsGroupingByTest {
 	}
 
 	public static void main(String[] args) {
+		Random random = new Random();
 		List<Entity> entityList = new ArrayList<>();
 		for (int i = 0; i < 1000; i++) {
 			for (int j = 0; j < 1000; j++) {
-				Entity entity = new Entity();
-				entity.setValue(i);
-				entity.setName(j);
+				Entity entity = new Entity(random.nextInt(100), j);
 				entityList.add(entity);
 			}
 		}
 
-		Map<Integer, List<Integer>> map = test1(entityList);
-		List<List<Integer>> list = test2(entityList);
-		map.clear();
-		list.clear();
+		long startTime;
 
-		List<List<Integer>> list1 = test2(entityList);
+		startTime = System.nanoTime();
+		Map<Integer, List<Integer>> map2 = test2(entityList);
+		System.out.println(System.nanoTime() - startTime);
+
+		startTime = System.nanoTime();
 		Map<Integer, List<Integer>> map1 = test1(entityList);
+		System.out.println(System.nanoTime() - startTime);
+
 		map1.clear();
-		list1.clear();
+		map2.clear();
 
+		startTime = System.nanoTime();
+		map1 = test1(entityList);
+		System.out.println(System.nanoTime() - startTime);
+
+		startTime = System.nanoTime();
+		map2 = test2(entityList);
+		System.out.println(System.nanoTime() - startTime);
+
+		map1.clear();
+		map2.clear();
 	}
 
-	static Map<Integer, List<Integer>> test1(List<Entity> entityList) {
-		List<Entity> testList = new ArrayList<>(entityList);
-
-		long startTime = System.nanoTime();
-		Map<Integer, List<Integer>> map = testList.stream().
+	public static Map<Integer, List<Integer>> test1(List<Entity> entityList) {
+		return entityList.stream().
 				collect(Collectors.groupingBy(Entity::getValue, Collectors.mapping(Entity::getName, Collectors.toList())));
-		System.out.println(System.nanoTime() - startTime);
-		return map;
 	}
 
-	static List<List<Integer>> test2(List<Entity> entityList) {
-		List<Entity> testList = new ArrayList<>(entityList);
-		List<List<Integer>> result = new ArrayList<>();
-
-		long startTime = System.currentTimeMillis();
-		Map<Integer, List<Entity>> map1 = testList.stream().collect(Collectors.groupingBy(Entity::getValue));
-		for (List<Entity> list : map1.values()) {
-			List<Integer> tempList = list.stream().map(Entity::getName).collect(Collectors.toList());
-			result.add(tempList);
+	public static Map<Integer, List<Integer>> test2(List<Entity> entityList) {
+		Map<Integer, List<Integer>> map = new HashMap<>();
+		for (Entity entity : entityList) {
+			List<Integer> list = map.get(entity.getValue());
+			if (list == null) {
+				list = new ArrayList<>();
+				list.add(entity.getName());
+				map.put(entity.getValue(), list);
+			} else {
+				list.add(entity.getName());
+			}
 		}
-		System.out.println(System.nanoTime() - startTime);
-		return result;
+		return map;
 	}
 
 }
