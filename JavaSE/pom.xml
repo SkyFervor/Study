@@ -18,6 +18,7 @@
 		<module>DataStructure</module>
 		<module>General</module>
 		<module>MultiThread</module>
+		<module>DesignPatterns</module>
 	</modules>
 
 	<dependencies>
