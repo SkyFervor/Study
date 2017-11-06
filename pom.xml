@@ -22,7 +22,10 @@
 		<module>Spring</module>
 		<module>SpringBoot</module>
 		<module>Utils</module>
-	</modules>
+        <module>Thrift</module>
+        <module>Hystrix</module>
+        <module>Kafka</module>
+    </modules>
 
 	<build>
 		<plugins>
