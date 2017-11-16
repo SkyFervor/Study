@@ -10,3 +10,5 @@ dependency.txt
 # idea
 .idea/
 *.iml
+
+Swagger/
