@@ -9,5 +9,6 @@ public class SplitTest {
 		System.out.println(Arrays.toString(s.split("")));
 		System.out.println(Arrays.toString(s.split("\r\n")));
 		System.out.println(Arrays.toString(s.split("3")));
+		System.out.println(Arrays.toString(s.split(",")));
 	}
 }
