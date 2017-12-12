@@ -1,13 +1,16 @@
-# maven
+# System
+.DS_Store
+
+# Maven
 target/
 dependency.txt
 
-# eclipse
+# Eclipse
 .settings/
 .project
 .classpath
 
-# idea
+# Idea
 .idea/
 *.iml
 
