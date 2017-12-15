@@ -12,7 +12,7 @@ public class TestControllerTest extends AbstractTest {
 	private TestController testController;
 
 	@Test
-	public void test1() throws Exception {
+	public void test() throws Exception {
 		testController.test();
 	}
 
