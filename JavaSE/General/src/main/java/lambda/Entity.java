@@ -1,10 +1,12 @@
 package lambda;
 
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Builder
+@ToString
 public class Entity {
 
 	private int key;
