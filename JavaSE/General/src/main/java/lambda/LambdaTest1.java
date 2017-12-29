@@ -18,7 +18,7 @@ public class LambdaTest1 {
 	private static void testJoining() {
 		Entity e1 = new Entity(1, 1, 1);
 		Entity e2 = new Entity(2, 2, 2);
-		Object[] keys = new Object[]{null};
+		Object[] keys = new Object[]{e1, e2};
 		String result = Arrays.stream(keys)
 				.filter(Objects::nonNull)
 				.map(Object::toString)
