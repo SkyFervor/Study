@@ -29,7 +29,7 @@ public class LambdaTest1 {
 	private static void testLimit() {
 		Entity e1 = new Entity(1, 1, 1);
 		Entity e2 = new Entity(2, 2, 2);
-		List<Entity> list = Arrays.asList(null, e2, null, e1, null);
+		List<Entity> list = Arrays.asList(e1, e2, null, e1, null);
 
 		String result;
 		int firstNullIndex = list.indexOf(null);
