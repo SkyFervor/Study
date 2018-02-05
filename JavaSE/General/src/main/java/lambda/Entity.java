@@ -2,6 +2,8 @@ package lambda;
 
 import lombok.*;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -11,5 +13,16 @@ public class Entity {
 
 	private int key;
 	private int value;
+	private int name;
+	private List<ChildEntity> childEntities;
+}
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@ToString
+class ChildEntity {
+	private int key;
 	private int name;
 }

@@ -16,8 +16,8 @@ public class LambdaTest1 {
 	}
 
 	private static void testJoining() {
-		Entity e1 = new Entity(1, 1, 1);
-		Entity e2 = new Entity(2, 2, 2);
+		Entity e1 = new Entity(1, 1, 1, null);
+		Entity e2 = new Entity(2, 2, 2, null);
 		Object[] keys = new Object[]{e1, e2};
 		String result = Arrays.stream(keys)
 				.filter(Objects::nonNull)
@@ -27,8 +27,8 @@ public class LambdaTest1 {
 	}
 
 	private static void testLimit() {
-		Entity e1 = new Entity(1, 1, 1);
-		Entity e2 = new Entity(2, 2, 2);
+		Entity e1 = new Entity(1, 1, 1, null);
+		Entity e2 = new Entity(2, 2, 2, null);
 		List<Entity> list = Arrays.asList(e1, e2, null, e1, null);
 
 		String result;

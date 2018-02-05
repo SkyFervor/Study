@@ -6,22 +6,12 @@ package genericType;
  */
 public class GenericTranslateTest {
 	public static void main(String[] args) {
-		Super<String> obj = new Child();
+		Generic<String> obj = new ChildGeneric();
 		obj.set("test");
 	}
 }
 
-class Super<T> {
-	void set(T t) {
-		System.out.println("Super.set");
-	}
-
-	T get() {
-		return null;
-	}
-}
-
-class Child extends Super<String> {
+class ChildGeneric extends Generic<String> {
 	// 语法上正确覆盖了父类方法
 	// 问题：类型擦除导致父类方法参数变成Object
 	@Override
