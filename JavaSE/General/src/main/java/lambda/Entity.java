@@ -12,7 +12,7 @@ import java.util.List;
 public class Entity {
 
 	private int key;
-	private int value;
+	private Integer value;
 	private int name;
 	private List<ChildEntity> childEntities;
 }
