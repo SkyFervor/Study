@@ -8,37 +8,37 @@ import java.util.Arrays;
  * 稳定，算法较复杂
  */
 public class MergeSort {
-	public static void mergeSort(int[] arr, int[] tmp, int start, int end) {
-		if (start >= end)
-			return;
 
-		int mid = (start + end) / 2;
-		mergeSort(arr, tmp, start, mid);
-		mergeSort(arr, tmp, mid + 1, end);
+	public static void mergeSort(int[] arr, int low, int high) {
+		if (low < high) {
+			int mid = (low + high) / 2;
+			mergeSort(arr, low, mid);
+			mergeSort(arr, mid + 1, high);
 
-		int index = start;
-		int i = start;
-		int j = mid + 1;
-		while (i <= mid && j <= end) {
-			if (arr[i] <= arr[j])
-				tmp[index++] = arr[i++];
-			else
-				tmp[index++] = arr[j++];
+			int[] temp = new int[high - low + 1];
+			int i = low;
+			int j = mid + 1;
+			int k = 0;
+			while (i <= mid && j <= high) {
+				if (arr[i] <= arr[j]) {
+					temp[k++] = arr[i++];
+				} else {
+					temp[k++] = arr[j++];
+				}
+			}
+			while (i <= mid) {
+				temp[k++] = arr[i++];
+			}
+			while (j <= high) {
+				temp[k++] = arr[j++];
+			}
+			System.arraycopy(temp, 0, arr, low, k);
 		}
-
-		while (i <= mid)
-			tmp[index++] = arr[i++];
-		while (j <= end)
-			tmp[index++] = arr[j++];
-
-		for (int k = start; k <= end; k++)
-			arr[k] = tmp[k];
 	}
 
 	public static void main(String[] args) {
-		int[] arr = { 5, 3, 6, 2, 1, 9, 4, 8, 7 };
-		int[] tmp = new int[arr.length];
-		mergeSort(arr, tmp, 0, arr.length - 1);
-		System.out.println(Arrays.toString(arr));
+		int[] arr1 = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
+		mergeSort(arr1, 0, arr1.length - 1);
+		System.out.println(Arrays.toString(arr1));
 	}
 }
