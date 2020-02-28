@@ -44,8 +44,9 @@ public class Outer_Test {
 		LocalInner anonInnerObj = new LocalInner() {
 			@Override
 			public int get() {
-				// 访问方法中的局部变量，JDK1.7及之前版本必须是final的
+				// 访问方法中的局部变量，JDK1.7及之前版本必须是final的，之后可省略final
 				// 原因：内部类也是类，其生命周期可能长于局部变量，可能导致访问到已释放的局部变量
+				// 原理：内部类中备份局部变量的引用
 				return a;
 			}
 
