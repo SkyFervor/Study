@@ -29,12 +29,12 @@ public class Test {
 		System.out.println();
 
 		// 根据申明类型调用
-		System.out.println(get(superObj));
-		System.out.println(get(s_child));
-		System.out.println(get(childObj));
+		System.out.println(type(superObj));
+		System.out.println(type(s_child));
+		System.out.println(type(childObj));
 		// 继承链最近的向上转型
 		ChildOfChild cc = new ChildOfChild();
-		System.out.println(get(cc));
+		System.out.println(type(cc));
 
 		System.out.println();
 
@@ -45,12 +45,12 @@ public class Test {
 
 	}
 
-	public static int get(Super s) {
-		return 1;
+	public static String type(Super s) {
+		return "type(Super)";
 	}
 
-	public static int get(Child c) {
-		return 2;
+	public static String type(Child c) {
+		return "type(Child)";
 	}
 }
 
@@ -74,8 +74,8 @@ class Super {
 }
 
 class Child extends Super {
-	int a = 2;
-	int b = 3;
+	int a = 3;
+	int b = 4;
 
 	@Override
 	public int getA() {

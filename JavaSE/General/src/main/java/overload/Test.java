@@ -12,11 +12,11 @@ public class Test {
 	}
 
 	public void run(Super obj) {
-		System.out.println("This is " + obj.get());
+		System.out.println("run(Super): This is " + obj.get());
 	}
 
 	public void run(Child obj) {
-		System.out.println("This is " + obj.get());
+		System.out.println("run(Child): This is " + obj.get());
 	}
 
 	public static void main(String[] args) {

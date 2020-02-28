@@ -25,12 +25,20 @@ public class Test {
 		Integer a = 127;
 		Integer b = 127;
 		System.out.println(a == b); // true
+
+		Integer c = -128;
+		Integer d = -128;
+		System.out.println(c == d); // true
 	}
 
 	public static void test4() {
 		Integer a = 128;
 		Integer b = 128;
 		System.out.println(a == b); // false
+
+		Integer c = -129;
+		Integer d = -129;
+		System.out.println(c == d); // false
 	}
 
 }
