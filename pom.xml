@@ -63,6 +63,7 @@
 		<commons-beanutils>1.9.3</commons-beanutils>
 		<org.projectlombok>1.16.6</org.projectlombok>
 		<com.google.guava>23.6-jre</com.google.guava>
+		<joda-time>2.10.5</joda-time>
 
 		<org.apache.poi.version>3.16</org.apache.poi.version>
 		<org.jdom.version>2.0.6</org.jdom.version>
@@ -212,6 +213,12 @@
 				<artifactId>guava</artifactId>
 				<version>${com.google.guava}</version>
 			</dependency>
+			<dependency>
+				<groupId>joda-time</groupId>
+				<artifactId>joda-time</artifactId>
+				<version>${joda-time}</version>
+			</dependency>
+
 
 			<!-- XML -->
 			<dependency>
