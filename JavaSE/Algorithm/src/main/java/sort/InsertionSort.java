@@ -4,6 +4,30 @@ import java.util.*;
 
 public class InsertionSort {
 
+	public static int[] sort(int[] arr) {
+		if (null == arr || 1 >= arr.length) {
+			return arr;
+		}
+		for (int i = 1; i < arr.length; i++) {
+			int temp = arr[i];
+			int low = 0;
+			int high = i - 1;
+			while (low <= high) {
+				int mid = (low + high) / 2;
+				if (arr[mid] <= temp) {
+					low = mid + 1;
+				} else {
+					high = mid - 1;
+				}
+			}
+			for (int j = i - 1; j > high; j--) {
+				arr[j + 1] = arr[j];
+			}
+			arr[high + 1] = temp;
+		}
+		return arr;
+	}
+
 	public static <T> void insertionSort(List<T> arr, Comparator<T> comparator) {
 		if (arr == null || arr.size() <= 1 || comparator == null) {
 			return;
@@ -63,6 +87,9 @@ public class InsertionSort {
 	}
 
 	public static void main(String[] args) {
+		int[] arr = {9, 8 ,8};
+		System.out.println(Arrays.toString(sort(arr)));
+
 		Random random = new Random();
 		List<Integer> arr0 = new ArrayList<>();
 		for (int i = 0; i < 10; i++) {
