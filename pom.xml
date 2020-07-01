@@ -54,7 +54,7 @@
 		<org.hibernate.version>5.2.10.Final</org.hibernate.version>
 		<org.hibernate.validator.version>5.4.1.Final</org.hibernate.validator.version>
 		<com.mchange.c3p0.version>0.9.5.4</com.mchange.c3p0.version>
-		<mysql.version>6.0.6</mysql.version>
+		<mysql.version>8.0.16</mysql.version>
 
 		<com.alibaba.fastjson.version>1.2.33</com.alibaba.fastjson.version>
 		<com.alibaba.dubbo>2.5.7</com.alibaba.dubbo>
