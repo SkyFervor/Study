@@ -45,7 +45,7 @@
 	<properties>
 		<com.skyfervor.sio.version>1.0-SNAPSHOT</com.skyfervor.sio.version>
 
-		<junit.version>4.12</junit.version>
+		<junit.version>4.13.1</junit.version>
 		<javax.servlet.version>3.1.0</javax.servlet.version>
 		<javax.servlet.jsp.version>2.3.1</javax.servlet.jsp.version>
 		<org.slf4j.version>1.7.25</org.slf4j.version>
