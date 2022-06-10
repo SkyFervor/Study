@@ -57,7 +57,7 @@
 		<mysql.version>6.0.6</mysql.version>
 
 		<com.alibaba.fastjson.version>1.2.33</com.alibaba.fastjson.version>
-		<com.alibaba.dubbo>2.5.7</com.alibaba.dubbo>
+		<com.alibaba.dubbo>2.6.12</com.alibaba.dubbo>
 
 		<org.apache.commons>3.6</org.apache.commons>
 		<commons-beanutils>1.9.3</commons-beanutils>
