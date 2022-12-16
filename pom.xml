@@ -49,7 +49,7 @@
 		<javax.servlet.version>3.1.0</javax.servlet.version>
 		<javax.servlet.jsp.version>2.3.1</javax.servlet.jsp.version>
 		<org.slf4j.version>1.7.25</org.slf4j.version>
-		<org.springframework.version>5.2.4.RELEASE</org.springframework.version>
+		<org.springframework.version>5.2.20.RELEASE</org.springframework.version>
 
 		<org.hibernate.version>5.2.10.Final</org.hibernate.version>
 		<org.hibernate.validator.version>5.4.1.Final</org.hibernate.validator.version>
